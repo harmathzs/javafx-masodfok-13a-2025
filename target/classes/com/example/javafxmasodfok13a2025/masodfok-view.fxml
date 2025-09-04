@@ -37,7 +37,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Label>
-            <TextField id="textfield_C" fx:id="textfield_C" promptText="c">
+            <TextField id="textfield_C" fx:id="textfield_C" alignment="CENTER_RIGHT" promptText="c">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
