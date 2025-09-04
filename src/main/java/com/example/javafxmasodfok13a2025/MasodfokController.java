@@ -32,9 +32,20 @@ public class MasodfokController {
     @FXML
     protected void onSolveButtonClick() {
         // get a, b, c
-        double a = Double.parseDouble(textfield_A.getText()); // TODO - validation
-        double b = Double.parseDouble(textfield_B.getText());
-        double c = Double.parseDouble(textfield_C.getText());
+        double a;
+        double b;
+        double c;
+        try {
+            a = Double.parseDouble(textfield_A.getText());
+            b = Double.parseDouble(textfield_B.getText());
+            c = Double.parseDouble(textfield_C.getText());
+        } catch (NumberFormatException e) {
+            List<String> lines = new ArrayList<>();
+            lines.add("Please enter only valid numbers!");
+            ObservableList<String> linesFX = FXCollections.observableList(lines);
+            listview_Solution.setItems(linesFX);
+            return;
+        }
 
         // calculate d
         double d = b*b - 4.0*a*c;
