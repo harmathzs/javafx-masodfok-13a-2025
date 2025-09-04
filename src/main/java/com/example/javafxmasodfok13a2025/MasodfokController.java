@@ -70,7 +70,6 @@ public class MasodfokController {
                 ObservableList<String> linesFX = FXCollections.observableList(lines);
                 listview_Solution.setItems(linesFX);
             } else {
-                // TODO - only one real solution
                 double x = ( -b + Math.sqrt(d) )/( 2.0*a );
 
                 String line1 = "x = "+Math.round(x*100.0)/100.0;
