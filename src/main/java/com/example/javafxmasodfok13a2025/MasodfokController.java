@@ -31,11 +31,8 @@ public class MasodfokController {
     }
     @FXML
     protected void onSolveButtonClick() {
-        // TODO - implement method
-        //System.out.println("onSolveButtonClick start");
-
         // get a, b, c
-        double a = Double.parseDouble(textfield_A.getText());
+        double a = Double.parseDouble(textfield_A.getText()); // TODO - validation
         double b = Double.parseDouble(textfield_B.getText());
         double c = Double.parseDouble(textfield_C.getText());
 
@@ -48,8 +45,8 @@ public class MasodfokController {
         double x1 = ( -b + Math.sqrt(d) )/( 2.0*a );
         double x2 = ( -b - Math.sqrt(d) )/( 2.0*a );
 
-        String line1 = "x1 = "+x1; // TODO - round
-        String line2 = "x2 = "+x2;
+        String line1 = "x1 = "+Math.round(x1*100.0)/100.0;
+        String line2 = "x2 = "+Math.round(x2*100.0)/100.0;
 
         List<String> lines = new ArrayList<>();
         lines.add(line1);
